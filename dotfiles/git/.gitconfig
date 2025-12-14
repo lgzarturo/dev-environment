@@ -1,0 +1,107 @@
+# -----------------------------------------------------------------------------
+# Global Git configuration
+# Filosofía:
+# - Seguridad por defecto
+# - Historial legible
+# - Comodidad sin magia
+# -----------------------------------------------------------------------------
+
+[user]
+	name = Arturo Lopez
+	email = lgzarturo@gmail.com
+
+# -----------------------------------------------------------------------------
+# Comportamiento básico
+# -----------------------------------------------------------------------------
+[init]
+	defaultBranch = main
+
+[core]
+	editor = code --wait
+	autocrlf = input
+	safecrlf = true
+	pager = less -FRSX
+
+[color]
+	ui = auto
+
+# -----------------------------------------------------------------------------
+# Pull, fetch y merge
+# -----------------------------------------------------------------------------
+[pull]
+	rebase = true
+
+[rebase]
+	autoStash = true
+
+[fetch]
+	prune = true
+
+[merge]
+	conflictStyle = zdiff3
+
+# -----------------------------------------------------------------------------
+# Diff y log (historial legible)
+# -----------------------------------------------------------------------------
+[diff]
+	algorithm = histogram
+	colorMoved = default
+
+[log]
+	date = iso
+
+# -----------------------------------------------------------------------------
+# Aliases útiles (sin ocultar conceptos de Git)
+# -----------------------------------------------------------------------------
+[alias]
+	st = status -sb
+	co = checkout
+	br = branch
+	ci = commit
+
+	# Log compacto y legible
+	lg = log --graph --decorate --oneline --all
+
+	# Log detallado para revisar cambios
+	ll = log --stat
+
+	# Mostrar último commit
+	last = log -1 HEAD
+
+	# Mostrar ramas remotas limpias
+	prune-remote = fetch --prune
+
+	# Reset seguro al último commit
+	undo = reset --soft HEAD~1
+
+# -----------------------------------------------------------------------------
+# Seguridad y credenciales
+# -----------------------------------------------------------------------------
+[credential]
+	helper = manager-core
+
+# -----------------------------------------------------------------------------
+# Protección contra errores comunes
+# -----------------------------------------------------------------------------
+[advice]
+	detachedHead = false
+
+[push]
+	default = simple
+	autoSetupRemote = true
+
+# -----------------------------------------------------------------------------
+# Performance
+# -----------------------------------------------------------------------------
+[gc]
+	auto = 256
+
+# -----------------------------------------------------------------------------
+# Firmado de commits (opcional)
+# Descomentar cuando se configure GPG
+# -----------------------------------------------------------------------------
+#[commit]
+#	gpgsign = true
+
+#[user]
+#	signingkey = YOUR_GPG_KEY_ID
