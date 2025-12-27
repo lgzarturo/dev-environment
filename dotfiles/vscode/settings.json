@@ -47,6 +47,18 @@
     "editor.formatOnSave": true
   },
   "breadcrumbs.enabled": true,
+  "chat.checkpoints.showFileChanges": true,
+  "chat.customAgentInSubagent.enabled": true,
+  "chat.editor.wordWrap": "on",
+  "chat.edits2.enabled": true,
+  "chat.mcp.discovery.enabled": {
+    "claude-desktop": true
+  },
+  "chat.renderRelatedFiles": true,
+  "chat.todoListTool.writeOnly": true,
+  "copilot.chat.commitMessageLanguage": "es",
+  "copilot.gitCommitMessage.enabled": true,
+  "copilot.gitCommitMessage.language": "es",
   "cSpell.language": "es,en",
   "cSpell.userWords": [
     "Ahrefs",
@@ -70,6 +82,8 @@
     "CURP",
     "dataview",
     "datname",
+    "deepwork",
+    "descargable",
     "Descomentar",
     "dinámicamente",
     "entregables",
@@ -95,6 +109,7 @@
     "intgaleriaplazahotels",
     "intlasbrisashotels",
     "javaw",
+    "journaling",
     "killall",
     "killprocess",
     "kotlin",
@@ -112,6 +127,8 @@
     "Microservicio",
     "microservicios",
     "Microservicios",
+    "milisegundos",
+    "mits",
     "Mkdocs",
     "monitorea",
     "Monitorea",
@@ -125,11 +142,14 @@
     "ncnn",
     "nmap",
     "noall",
+    "noopener",
+    "noreferrer",
     "nosql",
     "nslookup",
     "observabilidad",
     "OHIP",
     "paralelizables",
+    "Parsea",
     "Pech",
     "Pgpool",
     "pipenv",
@@ -138,6 +158,7 @@
     "planeación",
     "Planeación",
     "planeaciones",
+    "Pomodoro",
     "postgres",
     "postgresql",
     "preferenciales",
@@ -182,6 +203,8 @@
     "submódulo",
     "submódulos",
     "subpuestos",
+    "subtarea",
+    "subtareas",
     "superusuario",
     "tablename",
     "tailwindcss",
@@ -204,6 +227,7 @@
     "waifu",
     "wikilinks",
     "Windham",
+    "wireframes",
     "worktree",
     "Yoast",
     "zoho",
@@ -233,18 +257,6 @@
     "catppuccin",
     "claude"
   ],
-  "chat.checkpoints.showFileChanges": true,
-  "chat.customAgentInSubagent.enabled": true,
-  "chat.editor.wordWrap": "on",
-  "chat.edits2.enabled": true,
-  "chat.mcp.discovery.enabled": {
-    "claude-desktop": true
-  },
-  "chat.renderRelatedFiles": true,
-  "chat.todoListTool.writeOnly": true,
-  "copilot.chat.commitMessageLanguage": "es",
-  "copilot.gitCommitMessage.enabled": true,
-  "copilot.gitCommitMessage.language": "es",
   "css.format.spaceAroundSelectorSeparator": true,
   "editor.acceptSuggestionOnEnter": "smart",
   "editor.aiStats.enabled": true,
@@ -287,10 +299,7 @@
   },
   "editor.renderControlCharacters": false,
   "editor.renderWhitespace": "boundary",
-  "editor.rulers": [
-    80,
-    120
-  ],
+  "editor.rulers": [80, 120],
   "editor.scrollBeyondLastLine": true,
   "editor.smoothScrolling": true,
   "editor.snippetSuggestions": "top",
@@ -304,9 +313,7 @@
   "editor.tabSize": 2,
   "editor.wordWrap": "on",
   "errorLens.enabled": true,
-  "errorLens.excludeBySource": [
-    "pylint"
-  ],
+  "errorLens.excludeBySource": ["pylint"],
   "errorLens.followCursor": "activeLine",
   "eslint.format.enable": false,
   "eslint.validate": [
@@ -325,17 +332,17 @@
   },
   "extensions.ignoreRecommendations": true,
   "files.associations": {
-    "**/templates/**/*.html": "django-html",
     "*.djhtml": "django-html",
-    "*.html": "django-html"
+    "*.html": "django-html",
+    "**/templates/**/*.html": "django-html"
   },
   "files.autoSave": "afterDelay",
   "files.trimTrailingWhitespace": true,
   "files.watcherExclude": {
+    "**/__pycache__/**": true,
     "**/.git/objects/**": true,
     "**/.mypy_cache/**": true,
     "**/.pytest_cache/**": true,
-    "**/__pycache__/**": true,
     "**/node_modules/**": true,
     "**/venv/**": true
   },
@@ -349,7 +356,7 @@
   "github.copilot.chat.codesearch.enabled": true,
   "github.copilot.chat.commitMessageGeneration.instructions": [
     {
-      "text": "Escribe los mensajes de commit en español utilizando el formato de Conventional Commits. Por ejemplo, si estás arreglando un error, el mensaje podría ser 'fix: corregir error en la función de autenticación'. Si estás agregando una nueva característica, el mensaje podría ser 'feat: agregar soporte para múltiples idiomas'. Asegúrate de que el mensaje sea claro y conciso, y que describa adecuadamente los cambios realizados. Que describa los cambios realizados en el código. El mensaje debe ser claro y conciso, reflejando las modificaciones hechas. El mensaje debe comenzar con un verbo en infinitivo"
+      "text": "Escribe mensajes de commit en español neutro y sin adornos innecesarios, siguiendo estrictamente el formato de Conventional Commits. Basándote exclusivamente en los cambios del staging area, genera el mensaje cumpliendo estas reglas: Estructura del Título: Comienza con un tipo (fix, feat, refactor, docs, test, chore, etc.) en minúsculas, seguido de dos puntos y un espacio. Contenido del Título: Usa un verbo en infinitivo. Debe ser claro, técnico y no exceder los 69 caracteres. No incluyas un punto final. Cuerpo del Mensaje: Deja una línea en blanco después del título. Detalla los cambios principales usando viñetas (-) o frases breves (una por línea). Explica qué cambió y por qué, evitando términos vagos como 'actualizar' o 'mejorar' sin contexto. Restricciones: No uses mayúsculas innecesarias ni puntuación al final del título. Salida: Genera únicamente el mensaje de commit, sin introducciones ni explicaciones adicionales. Ejemplos de referencia: fix: corregir validación de tokens en el middleware de autenticación, feat: implementar soporte para internacionalización (i18n)"
     }
   ],
   "github.copilot.chat.completionContext.typescript.mode": "on",
@@ -397,6 +404,7 @@
   "jest.autoRun": "watch",
   "jest.runMode": "on-save",
   "liveServer.settings.donotShowInfoMsg": true,
+  "makefile.configureOnOpen": true,
   "markdown.occurrencesHighlight.enabled": true,
   "markdown.preview.breaks": true,
   "markdown.preview.fontFamily": "'Hack Nerd Font', 'Skia', 'Gill Sans', -apple-system, BlinkMacSystemFont, 'Segoe WPC', 'Segoe UI', system-ui, 'Ubuntu', 'Droid Sans', sans-serif",
@@ -415,29 +423,18 @@
   "prettier.useEditorConfig": true,
   "python.analysis.autoImportCompletions": true,
   "python.analysis.diagnosticMode": "openFilesOnly",
-  "python.analysis.extraPaths": [
-    "apps",
-    "core",
-    "utils"
-  ],
+  "python.analysis.extraPaths": ["apps", "core", "utils"],
   "python.analysis.stubPath": ".vscode/stubs",
   "python.analysis.typeCheckingMode": "strict",
   "python.defaultInterpreterPath": "${workspaceFolder}/.venv/bin/python",
-  "python.formatting.blackArgs": [
-    "--line-length=88",
-    "--target-version=py313"
-  ],
+  "python.formatting.blackArgs": ["--line-length=88", "--target-version=py313"],
   "python.formatting.provider": "black",
   "python.linting.enabled": true,
-  "python.linting.ruffArgs": [
-    "--config=pyproject.toml"
-  ],
+  "python.linting.ruffArgs": ["--config=pyproject.toml"],
   "python.linting.ruffEnabled": true,
   "python.terminal.activateEnvironment": true,
   "redhat.telemetry.enabled": true,
-  "ruff.args": [
-    "--config=pyproject.toml"
-  ],
+  "ruff.args": ["--config=pyproject.toml"],
   "ruff.fixAll": true,
   "ruff.fixOnSave": true,
   "ruff.organizeImports": true,

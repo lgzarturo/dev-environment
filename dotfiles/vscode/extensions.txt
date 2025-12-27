@@ -19,6 +19,7 @@ dbaeumer.vscode-eslint
 docsmsft.docs-markdown
 donjayamanne.githistory
 dskwrk.vscode-generate-getter-setter
+esbenp.prettier-vscode
 dsznajder.es7-react-js-snippets
 eamodio.gitlens
 formulahendry.auto-close-tag
@@ -28,6 +29,7 @@ github.copilot
 github.copilot-chat
 github.github-vscode-theme
 gruntfuggly.todo-tree
+imgildev.vscode-nextjs-generator
 heybourn.headwind
 humao.rest-client
 kbysiec.vscode-search-everywhere
@@ -35,6 +37,17 @@ kevinrose.vsc-python-indent
 kortina.vscode-markdown-notes
 leizongmin.node-module-intellisense
 mhutchie.git-graph
+mike-co.import-sorter
+ms-azuretools.vscode-containers
+ms-azuretools.vscode-docker
+ms-ceintl.vscode-language-pack-es
+ms-edgedevtools.vscode-edge-devtools
+ms-kubernetes-tools.vscode-kubernetes-tools
+ms-vscode-remote.remote-containers
+ms-vscode-remote.remote-wsl
+ms-vscode.js-debug-nightly
+ms-vscode.makefile-tools
+ms-vscode.powershell
 ms-dotnettools.vscode-dotnet-runtime
 ms-ossdata.vscode-pgsql
 ms-python.debugpy
@@ -44,6 +57,7 @@ ms-python.vscode-python-envs
 ms-vscode.vscode-typescript-next
 mtxr.sqltools
 mtxr.sqltools-driver-pg
+naumovs.color-highlight
 oderwat.indent-rainbow
 orta.vscode-jest
 planbcoding.vscode-react-refactor
@@ -61,8 +75,10 @@ stringham.move-ts
 svelte.svelte-vscode
 tamasfe.even-better-toml
 teabyii.ayu
+ujjwalbarman.kamekazi-dark
 unifiedjs.vscode-mdx
 usernamehw.errorlens
+vincaslt.highlight-matching-tag
 visualstudioexptteam.intellicode-api-usage-examples
 visualstudioexptteam.vscodeintellicode
 visualstudioexptteam.vscodeintellicode-completions
