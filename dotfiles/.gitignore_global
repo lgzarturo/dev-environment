@@ -3,10 +3,38 @@
 # ------------------------------
 # macOS
 .DS_Store
+Desktop.ini
 .AppleDouble
 .LSOverride
 
+# Android
+.android/
+.AndroidStudio*/
+
+# Kite
+.kite/
+
+# Compiled Python files
+*.pyc
+.python_history*
+.ipython/
+.ipynb_checkpoints/
+.pylint.d/
+.python_hue/
+
+# Node
+.nv/
+.nvm/
+.scripts/
+.node_repl_history
+
+# Vim
+.gist-vim
+.viminfo.tmp
+.viminfo
+
 # Windows
+._*
 Thumbs.db
 Desktop.ini
 ehthumbs.db
@@ -41,6 +69,38 @@ htmlcov/
 .nox/
 .coverage.*
 
+# Files that might appear on external disks
+.Spotlight-V100
+.Trashes
+
+# Java
+.m2/
+.java/
+.gradle/
+.sdkman/
+workspace/
+
+# Other folders
+.dotfiles
+.icons/
+.gitconfig
+.oh-my-zsh
+zsh_history
+.zcompdump*
+.ssh/
+.vim/
+.idea/
+.ssh/
+.grails/
+.eclipse/
+.gradle/
+.cache/
+.bundle/
+.gem/
+.local/
+.composer/
+*.zwc
+
 # Django
 *.log
 local_settings.py
@@ -71,6 +131,7 @@ node_modules/.vite/
 # ------------------------------
 vendor/
 node_modules/
+.cache/
 .env
 .env.*
 *.log
@@ -120,3 +181,4 @@ target/
 .vscode/settings.json
 .idea/
 *.iml
+

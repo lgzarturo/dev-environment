@@ -48,6 +48,12 @@
 	changed = green
 	untracked = cyan
 
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+
 # -----------------------------------------------------------------------------
 # Pull, fetch y merge
 # -----------------------------------------------------------------------------
@@ -86,6 +92,15 @@
 
 [difftool "vscode-diff"]
 	cmd = code --new-window --wait --diff $LOCAL $REMOTE
+
+[merge]
+    tool = vscode-merge
+
+[mergetool]
+    KeppBackup = false
+
+[mergetool "vscode-merge"]
+    cmd = code --wait $MERGED
 
 [log]
 	date = iso
